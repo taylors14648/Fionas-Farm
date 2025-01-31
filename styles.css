@@ -66,3 +66,52 @@ table {
 body {
     min-width: 428px;
 }
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Habibi&display=swap');
+
+/*-------------------- CSS RESET ---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+    --green: #06A816;
+    --orange: #E75D02;
+    --black: #000000;
+    --white: #ffffff;
+    --font-heading: 'Irish Grover', cursive;
+    --font-body: 'Habibi', serif;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+body {
+    font-family: var(--font-body);
+    color: var(--black);
+    background-color: var(--white);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+h1 { font-size: 2.5em; color: var(--green); }
+h2 { font-size: 1.75em; color: var(--orange); }
+h3, p, li { font-size: 1.25em; }
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 834px) {
+    /* Medium screens styling here */
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media (min-width: 1280px) {
+    /* Large screens styling here */
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media (min-width: 1440px) {
+    /* XL screens styling here */
+}
