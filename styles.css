@@ -1,4 +1,3 @@
-/* CSS RESET */
 /* -------------------- IMPORTED FONTS -------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
 
@@ -64,54 +63,129 @@ table {
 
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body {
-    min-width: 428px;
-}
-/* -------------------- IMPORTED FONTS -------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Irish+Grover&family=Habibi&display=swap');
-
-/*-------------------- CSS RESET ---------------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* -------------------- ROOT VARIABLES --------------------------------------- */
-:root {
-    --green: #06A816;
-    --orange: #E75D02;
-    --black: #000000;
-    --white: #ffffff;
-    --font-heading: 'Irish Grover', cursive;
-    --font-body: 'Habibi', serif;
-}
-
-/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
-body {
     font-family: var(--font-body);
     color: var(--black);
     background-color: var(--white);
 }
 
+header, footer {
+    background-color: var(--green);
+    text-align: center;
+    padding: 20px;
+}
+
 h1, h2, h3 {
     font-family: var(--font-heading);
+    --font-heading: 'Irish Grover', cursive;
 }
 
-h1 { font-size: 2.5em; color: var(--green); }
-h2 { font-size: 1.75em; color: var(--orange); }
-h3, p, li { font-size: 1.25em; }
+h1 { 
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--white);
+    text-shadow: 3px 3px 0px var(--black);
+}
+q{
+    font-style: italic;
+    color: var(--white);
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+    background-color: #E75D02;
+    width: 50%;
+    justify-content: center;
+}
+h2 { 
+    font-size: 1.75em; 
+    align-content: left;
+    padding: 15px;
 
-/*-------------------- MEDIA QUERY (medium) --------------------------------*/
-@media (min-width: 834px) {
-    /* Medium screens styling here */
+}
+h3, li { 
+    font-size: 1.25em; 
+    text-align: center;
 }
 
-/*-------------------- MEDIA QUERY (large) ------------------------------------*/
-@media (min-width: 1280px) {
-    /* Large screens styling here */
+p {
+    font-size: 1.25em;
+    text-align: left;
+    line-height: 1.15;
+    padding: 15px;
 }
 
-/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
-@media (min-width: 1440px) {
-    /* XL screens styling here */
+.produce-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Default single column */
+    gap: 30px;
+    padding: 20px;
+    list-style: none;
+    justify-content: center;
+}
+
+/* Grid Items (Fruits & Vegetables) */
+.produce-grid li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 100%;
+    margin: auto;
+}
+
+/* Image Styling */
+.produce-grid li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay Box for Text */
+.produce-grid li .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.9); /* 90% opacity black */
+    padding: 10px 15px;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--green);
+    padding: 20px;
+    color: var(--white);
+}
+
+/* Footer Heading Styles */
+footer h2{
+    font-size: 1.75em;
+    font-family: var(--font-heading);
+}
+footer h3 {
+    font-size: 1.25em;
+}
+.contact address {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer ul {
+    
+    line-height: 1.5;  
+    list-style: none;
+    padding: 0;
+}
+
+
+footer .copyright {
+    background: var(--white); 
+    color: var(--green); 
+    margin-top: 10px;
+    text-align: center;
+    width: 100%
 }
