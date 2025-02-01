@@ -54,7 +54,7 @@ table {
 /* -------------------- ROOT VARIABLES  -------------------- */
 :root {
     font-family: "Habibi", serif;
-    font-size: 1.25em;
+    line-height: 1.5;
     --green:#06A816;
     --orange:#E75D02;
     --black:#000000;
@@ -84,6 +84,7 @@ h1 {
     font-size: 2.5em;
     color: var(--white);
     text-shadow: 3px 3px 0px var(--black);
+    padding: 10px;
 }
 q{
     font-style: italic;
@@ -91,12 +92,32 @@ q{
 }
 nav {
     display: flex;
-    flex-direction: column;
-    color: var(--white);
-    background-color: #E75D02;
-    width: 50%;
-    justify-content: center;
+    justify-content: center; /* Centers nav items */
+    margin: 2em;
 }
+
+nav ul {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 10px; 
+    padding: 0;
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: var(--white);
+}
+
+nav ul li {
+    width: 300px; /* Sets a reasonable width for buttons */
+    height:40px;
+    align-content: center;
+    background-color: var(--orange);
+    color: var(--white);
+    border-radius: 3px;
+}
+
 h2 { 
     font-size: 1.75em; 
     align-content: left;
@@ -117,14 +138,13 @@ p {
 
 .produce-grid {
     display: grid;
-    grid-template-columns: 1fr; /* Default single column */
+    grid-template-columns: 1fr;
     gap: 30px;
     padding: 20px;
     list-style: none;
     justify-content: center;
 }
 
-/* Grid Items (Fruits & Vegetables) */
 .produce-grid li {
     position: relative;
     display: flex;
@@ -135,33 +155,28 @@ p {
     margin: auto;
 }
 
-/* Image Styling */
 .produce-grid li img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-/* Overlay Box for Text */
 .produce-grid li .overlay {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--white);
-    background: rgba(0, 0, 0, 0.9); /* 90% opacity black */
-    padding: 10px 15px;
-    font-size: 1.25em;
+    background-color: rgba(0, 0, 0, 0.8); 
+    padding: 15px 30px;
     text-align: center;
 }
 
 footer {
     background-color: var(--green);
-    padding: 20px;
     color: var(--white);
 }
 
-/* Footer Heading Styles */
 footer h2{
     font-size: 1.75em;
     font-family: var(--font-heading);
@@ -169,23 +184,32 @@ footer h2{
 footer h3 {
     font-size: 1.25em;
 }
-.contact address {
+footer address {
     text-align: center;
     margin-bottom: 15px;
+    line-height: 1.2; /* ✅ Reduces spacing between lines */
+    padding: 0; /* ✅ Removes unnecessary padding */
 }
 
+/* Ensure Address Paragraphs Have Consistent Spacing */
+footer address p {
+    margin: 2px 0; /* ✅ Reduces spacing between address lines */
+    padding: 0; /* ✅ Removes padding to match the hours section */
+    text-align: center;
+}
+
+/* Hours Section (Keep as it is for consistency) */
 footer ul {
-    
     line-height: 1.5;  
     list-style: none;
     padding: 0;
 }
 
-
+/* Copyright (Keep Separate) */
 footer .copyright {
     background: var(--white); 
     color: var(--green); 
-    margin-top: 10px;
+    margin:  0;
     text-align: center;
-    width: 100%
+    width: 100%;
 }
