@@ -86,16 +86,21 @@ h1 {
     text-shadow: 3px 3px 0px var(--black);
     padding: 10px;
 }
-q{
+header p{
     font-style: italic;
     color: var(--white);
+    text-align: center;
 }
 nav {
+    margin: 1em;
     display: flex;
-    justify-content: center; /* Centers nav items */
-    margin: 2em;
+    justify-content: center;
 }
-
+nav h2 {
+    visibility:hidden;
+    height:0px;
+    width: 0px;
+}
 nav ul {
     display: flex;
     flex-direction: column; 
@@ -110,7 +115,7 @@ nav ul li a:visited {
 }
 
 nav ul li {
-    width: 300px; /* Sets a reasonable width for buttons */
+    width: 300px; 
     height:40px;
     align-content: center;
     background-color: var(--orange);
@@ -136,80 +141,61 @@ p {
     padding: 15px;
 }
 
-.produce-grid {
+.produce-grid figure {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 30px;
-    padding: 20px;
-    list-style: none;
-    justify-content: center;
-}
-
-.produce-grid li {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative; /* Ensures positioning inside figure */
     text-align: center;
-    max-width: 100%;
-    margin: auto;
+    justify-content: center;
 }
 
-.produce-grid li img {
-    width: 100%;
-    height: auto;
+.produce-grid img {
     display: block;
+    justify-content: center;
+    margin: 1em;
 }
 
-.produce-grid li .overlay {
+/* Center Figcaption */
+.produce-grid figcaption {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--white);
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     background-color: rgba(0, 0, 0, 0.8); 
-    padding: 15px 30px;
+    color: var(--white); 
+    padding: 10px 20px;
     text-align: center;
 }
+
 
 footer {
     background-color: var(--green);
     color: var(--white);
 }
 
-footer h2{
-    font-size: 1.75em;
-    font-family: var(--font-heading);
-}
-footer h3 {
-    font-size: 1.25em;
-}
-footer address {
-    text-align: center;
-    margin-bottom: 15px;
-    line-height: 1.2; /* ✅ Reduces spacing between lines */
-    padding: 0; /* ✅ Removes unnecessary padding */
-}
-
-/* Ensure Address Paragraphs Have Consistent Spacing */
-footer address p {
-    margin: 2px 0; /* ✅ Reduces spacing between address lines */
-    padding: 0; /* ✅ Removes padding to match the hours section */
+footer .contact {
+    margin-bottom: 20px;
     text-align: center;
 }
 
-/* Hours Section (Keep as it is for consistency) */
-footer ul {
-    line-height: 1.5;  
-    list-style: none;
-    padding: 0;
-}
 
-/* Copyright (Keep Separate) */
+
+
+dd {
+    display: block;
+  }
+  dl {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
 footer .copyright {
-    background: var(--white); 
-    color: var(--green); 
-    margin:  0;
-    text-align: center;
+    background: var(--white);
+    color: var(--green);
+    padding: 5px 0;
+    display: block;
     width: 100%;
+    text-align: center;
 }
